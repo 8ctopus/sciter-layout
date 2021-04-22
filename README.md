@@ -1,6 +1,6 @@
 # sciter grid demo app
 
-This is a [sciter](https://sciter.com/) js demo app for grid alignment.
+This is a [sciter](https://sciter.com/) js grids demo app.
 
 ## get started
 
@@ -8,6 +8,7 @@ This is a [sciter](https://sciter.com/) js demo app for grid alignment.
 - run `install.bat` to download the latest sciter binaries and library
 - start `scapp.exe`
 - to refresh the app after changes to the html/css click `F5`
+- to view the other grids `scapp.exe scapp-01.html`
 
 ## debug app
 - start `inspector.exe`
