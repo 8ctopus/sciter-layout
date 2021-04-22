@@ -1,0 +1,57 @@
+<html
+    window-resizable="true"
+    window-width="750dip"
+    window-height="600dip"
+>
+<head>
+<title>sciter grid layout demo</title>
+<style>
+
+body {
+    margin: 0;
+}
+
+.parent {
+    // take maximum width and height
+    size: *;
+
+    // set layout
+    flow: grid(
+        1 1 1,
+        2 2 3,
+        4 5 5,
+        6 7 8,
+        9 9 9,
+    );
+}
+
+.parent > div {
+    margin: 5dip;
+
+    // take maximum width and height
+    size: *;
+
+    border: 1dip solid white;
+
+    background: rgb(210,210,210);
+
+    text-align: center;
+    vertical-align: middle;
+}
+
+</style>
+</head>
+<body>
+    <div .parent>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+</body>
+</html>
