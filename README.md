@@ -1,6 +1,6 @@
 # sciter grid demo app
 
-This is a [sciter](https://sciter.com/) js grids demo app.
+This is a [sciter](https://sciter.com/) js grids demo app that explores different layout possibilities in sciter.
 
 ## get started
 

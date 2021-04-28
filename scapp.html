@@ -10,17 +10,6 @@
 import * as sys from "@sys";
 import {encode,decode} from "@sciter";
 
-function xinspect(o,i){
-    if(typeof i=='undefined')i='';
-    if(i.length>50)return '[MAX ITERATIONS]';
-    var r=[];
-    for(var p in o){
-        var t=typeof o[p];
-        r.push(i+'"'+p+'" ('+t+') => '+(t=='object' ? 'object:'+xinspect(o[p],i+'  ') : o[p]+''));
-    }
-    return r.join(i+'\n');
-}
-
 // list current directory
 let list = sys.fs.$readdir(".");
 
@@ -28,7 +17,7 @@ let files = [];
 
 // iterate directory contents
 for (let file of list) {
-    // check for file
+    // ignore directories
     if (file.type !== 1)
         continue;
 
@@ -37,23 +26,21 @@ for (let file of list) {
         files.push(file.name);
 }
 
-//console.log(files);
-
-// get parent div
+// get element to append buttons
 let parent = document.$("header");
 
-// loop through grids
+// loop through files
 for (let file of files) {
     // create button
     let button = "<button>" + file + "</button>";
 
-    // add grid buttons
+    // add button to ui
     parent.append(button);
 }
 
-// set button on click event
+// set all buttons onclick event
 document.on("click", "header > button", function(event, button) {
-    // get button file name
+    // get file name from button
     let file = button.innerHTML;
 
     // read file
@@ -62,8 +49,10 @@ document.on("click", "header > button", function(event, button) {
     // decode buffer
     let html = decode(buffer, "utf-8");
 
-    let include = document.$("body"); //.attributes["src"] = file;
+    // get element to insert code in
+    let include = document.$("body");
 
+    // insert code
     include.innerHTML = html;
 });
 
@@ -72,6 +61,9 @@ document.on("click", "header > button", function(event, button) {
 
 body {
     margin: 0;
+
+    vertical-align: middle;
+    text-align: center;
 }
 
 header {
@@ -95,5 +87,6 @@ header > button {
     <!-- buttons -->
 </header>
 <body>
+    click one of the buttons
 </body>
 </html>
