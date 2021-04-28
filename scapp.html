@@ -5,10 +5,95 @@
 >
 <head>
 <title>sciter grid layout demos</title>
+<script type="module">
+
+import * as sys from "@sys";
+import {encode,decode} from "@sciter";
+
+function xinspect(o,i){
+    if(typeof i=='undefined')i='';
+    if(i.length>50)return '[MAX ITERATIONS]';
+    var r=[];
+    for(var p in o){
+        var t=typeof o[p];
+        r.push(i+'"'+p+'" ('+t+') => '+(t=='object' ? 'object:'+xinspect(o[p],i+'  ') : o[p]+''));
+    }
+    return r.join(i+'\n');
+}
+
+// list current directory
+let list = sys.fs.$readdir(".");
+
+let files = [];
+
+// iterate directory contents
+for (let file of list) {
+    // check for file
+    if (file.type !== 1)
+        continue;
+
+    // keep only grid*.html files
+    if (file.name.startsWith("grid") && file.name.endsWith(".html"))
+        files.push(file.name);
+}
+
+//console.log(files);
+
+// get parent div
+let parent = document.$("header");
+
+// loop through grids
+for (let file of files) {
+    // create button
+    let button = "<button>" + file + "</button>";
+
+    // add grid buttons
+    parent.append(button);
+}
+
+// set button on click event
+document.on("click", "header > button", function(event, button) {
+    // get button file name
+    let file = button.innerHTML;
+
+    // read file
+    let buffer = sys.fs.$readfile(file);
+
+    // decode buffer
+    let html = decode(buffer, "utf-8");
+
+    let include = document.$("body"); //.attributes["src"] = file;
+
+    include.innerHTML = html;
+});
+
+</script>
+<style>
+
+body {
+    margin: 0;
+}
+
+header {
+    width: *;
+    height: max-content;
+
+    padding: 8dip;
+
+    flow: horizontal;
+
+    background: rgb(230,230,230);
+}
+
+header > button {
+    margin: 0 *;
+}
+
+</style>
 </head>
+<header>
+    <!-- buttons -->
+</header>
 <body>
-    <include src="grid-02.html">
-        not found
-    </include>
 </body>
 </html>
