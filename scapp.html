@@ -30,13 +30,13 @@ for (let file of list) {
 let parent = document.$("header");
 
 // loop through files
-for (let file of files) {
+files.forEach(function (file) {
     // create button
     let button = "<button>" + file + "</button>";
 
     // add button to ui
     parent.append(button);
-}
+});
 
 // set all buttons onclick event
 document.on("click", "header > button", function(event, button) {
