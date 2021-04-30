@@ -24,7 +24,7 @@ for (let file of list) {
 
     // keep only grid*.html files
     if ((file.name.startsWith("flow") || file.name.startsWith("grid")) && file.name.endsWith(".html"))
-        files.push(file.name);
+        files.push(file.name.replace(".html", ""));
 }
 
 /*
@@ -48,7 +48,7 @@ files.forEach(function (file) {
 // set all buttons onclick event
 document.on("click", "header > button", function(event, button) {
     // get file name from button
-    let file = button.innerHTML;
+    let file = button.innerHTML + ".html";
 
     // read file
     let buffer = sys.fs.$readfile(file);
