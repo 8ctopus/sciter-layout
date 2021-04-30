@@ -1,0 +1,43 @@
+<style>
+
+.parent {
+    // take maximum width and height
+    size: *;
+
+    // set layout
+    flow: row(h2,div,h2);
+}
+
+.parent > div {
+    margin: 5dip;
+
+    size: *;
+
+    border: 1dip solid white;
+
+    background: rgb(210,210,210);
+
+    text-align: center;
+    vertical-align: middle;
+}
+
+.parent > h2 {
+    padding: 0.5em;
+    vertical-align: middle;
+}
+
+</style>
+<div .parent>
+    <h2>1</h2>
+    <div>1</div>
+    <h2>1</h2>
+    <h2>2</h2>
+    <div>2</div>
+    <h2>2</h2>
+    <h2>3</h2>
+    <div>3</div>
+    <h2>3</h2>
+    <h2>4</h2>
+    <div>4</div>
+    <h2>4</h2>
+</div>
