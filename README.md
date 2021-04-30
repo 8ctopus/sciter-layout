@@ -1,6 +1,6 @@
-# sciter grid demo app
+# sciter layout demo app
 
-This is a [sciter.js](https://sciter.com/) grids demo app that explores different layout possibilities in sciter.
+This is a [sciter.js](https://sciter.com/) demo app that explores different layout possibilities in sciter.
 
 The demo also presents Node.js like file system functions available in the sciter sdk.
 
@@ -17,3 +17,8 @@ The demo also presents Node.js like file system functions available in the scite
 - inside the `scapp.exe` window click `CTRL + SHIFT + I` to connect to the inspector
 - click `CTRL + SHIFT + left click` to inspect an element
 
+## layout
+
+sciter layout concepts are introduced in this article
+
+[https://terrainformatica.com/w3/flex-layout/flex-vs-flexbox.htm](https://terrainformatica.com/w3/flex-layout/flex-vs-flexbox.htm)
