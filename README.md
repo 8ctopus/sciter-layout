@@ -22,3 +22,11 @@ The demo also presents Node.js like file system functions available in the scite
 sciter layout concepts are introduced in this article
 
 [https://terrainformatica.com/w3/flex-layout/flex-vs-flexbox.htm](https://terrainformatica.com/w3/flex-layout/flex-vs-flexbox.htm)
+
+flow property possible values
+
+- `horizontal` contained elements are on a horizontal line
+- `vertical` contained elements are on a vertical line
+- `horizontal-wrap` same as above with wrapping to the next line when the line is too long
+- `row(item1, item2, ...)` items are on a horizontal line
+- `grid` custom layout
