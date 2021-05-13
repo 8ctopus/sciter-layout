@@ -22,8 +22,8 @@ for (let file of list) {
     if (file.type !== 1)
         continue;
 
-    // keep only grid*.html files
-    if ((file.name.startsWith("flow") || file.name.startsWith("grid")) && file.name.endsWith(".html"))
+    // keep only flow*, grid* and align*.html files
+    if ((file.name.startsWith("flow") || file.name.startsWith("grid") || file.name.startsWith("align")) && file.name.endsWith(".html"))
         files.push(file.name.replace(".html", ""));
 }
 
