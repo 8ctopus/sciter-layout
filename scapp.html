@@ -1,6 +1,6 @@
 <html
     window-resizable="true"
-    window-width="750dip"
+    window-width="800dip"
     window-height="600dip"
 >
 <head>
@@ -23,7 +23,7 @@ for (let file of list) {
         continue;
 
     // keep only flow*, grid* and align*.html files
-    if ((file.name.startsWith("flow") || file.name.startsWith("grid") || file.name.startsWith("align")) && file.name.endsWith(".html"))
+    if ((file.name.startsWith("flow") || file.name.startsWith("grid") || file.name.startsWith("align") || file.name.startsWith("stack")) && file.name.endsWith(".html"))
         files.push(file.name.replace(".html", ""));
 }
 

@@ -30,3 +30,5 @@ flow property possible values
 - `horizontal-wrap` same as above with wrapping to the next line when the line is too long
 - `row(item1, item2, ...)` items are on a horizontal line
 - `grid` custom layout
+- `stack` elements are on top of each other
+- `table`, `table-fixed` ? add an example

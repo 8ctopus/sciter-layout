@@ -1,0 +1,31 @@
+<style>
+
+.parent {
+    // take maximum width and height
+    size: *;
+
+    flow: stack;
+
+    background: rgb(210,210,210);
+}
+
+.parent > div {
+    height: *;
+
+    width: 30%;
+
+    margin: 5dip;
+
+    border: 1dip solid white;
+
+    text-align: center;
+
+    vertical-align: middle;
+}
+
+</style>
+<div .parent>
+    <div>&nbsp;&nbsp;1</div>
+    <div>&nbsp;1&nbsp;</div>
+    <div>1&nbsp;&nbsp;</div>
+</div>
