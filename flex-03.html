@@ -1,0 +1,37 @@
+<!--
+See https://sciter.com/css-extensions-in-h-smile-engine-part-ii-flex-units/
+-->
+<style>
+
+.parent {
+    // take maximum width and height
+    size: *;
+}
+
+.parent > div {
+    height: *;
+
+    width: 30%;
+
+    margin: 5dip;
+
+    // flex units
+    margin-left: 2*;
+    margin-right: 1*;
+
+    border: 1dip solid white;
+
+    background: rgb(210,210,210);
+
+    text-align: center;
+    vertical-align: middle;
+    white-space: pre;
+}
+
+</style>
+<div .parent>
+    <div>
+        margin-left: 2*;
+        margin-right: 1*;
+    </div>
+</div>

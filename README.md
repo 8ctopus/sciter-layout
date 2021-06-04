@@ -32,3 +32,27 @@ flow property possible values
 - `grid` custom layout
 - `stack` elements are on top of each other
 - `table`, `table-fixed` ? add an example
+
+# flex length units
+
+Flex length units are "weights" used in distribution of free space along some direction.
+
+[https://sciter.com/css-extensions-in-h-smile-engine-part-ii-flex-units/](https://sciter.com/css-extensions-in-h-smile-engine-part-ii-flex-units/)
+
+## %%
+
+```css
+width: 50%;
+margin-left: 30%%;
+margin-right: 70%%;
+```
+
+## *
+
+1* == 100%%
+
+```css
+width: 50%;
+margin-left: 1*;
+margin-right: 2*;
+```
