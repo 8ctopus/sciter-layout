@@ -10,7 +10,7 @@ import * as sys from "@sys";
 import {encode,decode} from "@sciter";
 
 // list current directory
-let list = sys.fs.$readdir(".");
+let list = sys.fs.$readdir("layouts");
 
 let files = [];
 
@@ -20,16 +20,9 @@ for (let file of list) {
     if (file.type !== 1)
         continue;
 
-    // keep only flow*, grid* and align*.html files
-    if ((file.name.startsWith("flow") || file.name.startsWith("grid") || file.name.startsWith("align") || file.name.startsWith("stack") || file.name.startsWith("flex")) && file.name.endsWith(".html"))
-        files.push(file.name.replace(".html", ""));
+    // add file
+    files.push(file.name.replace(".html", ""));
 }
-
-/*
-files = [
-    'layout-03.html',
-];
-*/
 
 // get element to append buttons
 let parent = document.$("header");
@@ -46,7 +39,7 @@ files.forEach(function (file) {
 // set all buttons onclick event
 document.on("click", "header > button", function(event, button) {
     // get file name from button
-    let file = button.innerHTML + ".html";
+    let file = "layouts/" + button.innerHTML + ".html";
 
     // read file
     let buffer = sys.fs.$readfile(file);
