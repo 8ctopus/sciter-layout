@@ -2,8 +2,6 @@
 
 This is a [sciter.js](https://sciter.com/) demo app that explores different layout possibilities in sciter.
 
-The demo also presents Node.js like file system functions available in the sciter sdk.
-
 ## get started
 
 - git clone the repository
