@@ -2,6 +2,8 @@
 
 This is a [sciter.js](https://sciter.com/) demo app that explores different layout possibilities in sciter.
 
+![sciter layout screenshot](screenshot.png)
+
 ## get started
 
 - git clone the repository
