@@ -4,18 +4,12 @@ This is a [sciter.js](https://sciter.com/) demo app that explores different layo
 
 ![sciter layout screenshot](screenshot.png)
 
-## get started
+## demo
 
 - git clone the repository
-- run `install.bat` to download the latest sciter binaries and library
-- run `scapp.bat`
-- to refresh the app after changes to the html/css click `F5`
-
-## debug app
-
-- start `inspector.exe`
-- inside the `scapp.exe` window click `CTRL + SHIFT + I` to connect to the inspector
-- click `CTRL + SHIFT + left click` to inspect an element
+- on Mac only `chmod +x install.sh scapp.sh`
+- run `install.bat` on Windows or `./install.sh` on Mac to download the latest sciter binaries and the sciter package manager
+- run `scapp.bat` or `./scapp.sh`
 
 # layout
 
