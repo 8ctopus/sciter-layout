@@ -3,59 +3,6 @@
 >
 <head>
 <title>sciter layout demo</title>
-<script src="js/utils.js" />
-<script type="module">
-
-// import functions from sciter libraries
-import * as sys from "@sys";
-import {encode,decode} from "@sciter";
-
-// list current directory
-let list = sys.fs.$readdir("layouts");
-
-let files = [];
-
-// iterate directory contents
-for (let file of list) {
-    // ignore directories
-    if (file.type !== 1)
-        continue;
-
-    // add file
-    files.push(file.name.replace(".html", ""));
-}
-
-// get element to append buttons
-let parent = document.$("header");
-
-// loop through files
-files.forEach(function(file) {
-    // create button
-    let button = "<button>" + file + "</button>";
-
-    // add button to ui
-    parent.append(button);
-});
-
-// set all buttons onclick event
-document.on("click", "header > button", function(event, button) {
-    // get file name from button
-    let file = "layouts/" + button.innerHTML + ".html";
-
-    // read file
-    let buffer = sys.fs.$readfile(file);
-
-    // decode buffer
-    let html = decode(buffer, "utf-8");
-
-    // get element to insert code in
-    let include = document.$("body");
-
-    // insert code
-    include.innerHTML = html;
-});
-
-</script>
 <style>
 
 html {
@@ -85,11 +32,66 @@ header > button {
 }
 
 </style>
+<script src="js/utils.js" />
+<script type="module">
+
+// import functions from sciter libraries
+import * as sys from "@sys";
+import {encode,decode} from "@sciter";
+
+document.ready = function() {
+    // list directory contents
+    let list = sys.fs.$readdir("layouts");
+
+    let files = [];
+
+    // iterate content
+    for (let file of list) {
+        // ignore directories
+        if (file.type !== 1)
+            continue;
+
+        // add layout
+        files.push(file.name.replace(".html", ""));
+    }
+
+    // get element to append buttons to
+    let parent = document.$("header");
+
+    // loop through files
+    files.forEach(function(file) {
+        // create button
+        let button = "<button>" + file + "</button>";
+
+        // add button to ui
+        parent.append(button);
+    });
+}
+
+/// header button click
+document.on("click", "header > button", function(event, button) {
+    // get file name from button
+    let file = "layouts/" + button.innerHTML + ".html";
+
+    // read file
+    let buffer = sys.fs.$readfile(file);
+
+    // decode buffer
+    let html = decode(buffer, "utf-8");
+
+    // get element to insert code in
+    let include = document.$("body");
+
+    // insert code
+    include.innerHTML = html;
+});
+
+</script>
 </head>
 <header>
     <!-- buttons -->
 </header>
 <body>
-    click one of the buttons
+    Click the buttons to explore the various layout possibilites with sciter.
 </body>
 </html>
