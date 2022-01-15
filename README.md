@@ -15,7 +15,7 @@ This is a [sciter.js](https://sciter.com/) demo that explores the different layo
 - git clone the repository
 - install packages `npm install`
 - install latest sciter sdk `npm run install-sdk`
-- run demo `npm run scapp`
+- start the demo `npm run scapp`
 
 ## layout
 
