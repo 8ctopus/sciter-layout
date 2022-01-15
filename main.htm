@@ -37,16 +37,16 @@ header > button {
 
 // import functions from sciter libraries
 import * as sys from "@sys";
-import {encode,decode} from "@sciter";
+import {decode} from "@sciter";
 
 document.ready = function() {
     // list directory contents
-    let list = sys.fs.$readdir("layouts");
+    const list = sys.fs.$readdir("layouts");
 
-    let files = [];
+    const files = [];
 
     // iterate content
-    for (let file of list) {
+    for (const file of list) {
         // ignore directories
         if (file.type !== 1)
             continue;
@@ -56,31 +56,31 @@ document.ready = function() {
     }
 
     // get element to append buttons to
-    let parent = document.$("header");
+    const parent = document.$("header");
 
     // loop through files
-    files.forEach(function(file) {
+    for (const file of files) {
         // create button
-        let button = "<button>" + file + "</button>";
+        const button = "<button>" + file + "</button>";
 
         // add button to ui
         parent.append(button);
-    });
-}
+    }
+};
 
 /// header button click
 document.on("click", "header > button", function(event, button) {
     // get file name from button
-    let file = "layouts/" + button.innerHTML + ".html";
+    const file = "layouts/" + button.innerHTML + ".html";
 
     // read file
-    let buffer = sys.fs.$readfile(file);
+    const buffer = sys.fs.$readfile(file);
 
     // decode buffer
-    let html = decode(buffer, "utf-8");
+    const html = decode(buffer, "utf-8");
 
     // get element to insert code in
-    let include = document.$("body");
+    const include = document.$("body");
 
     // insert code
     include.innerHTML = html;
