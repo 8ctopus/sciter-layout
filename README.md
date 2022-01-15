@@ -1,15 +1,21 @@
-# sciter layout demo app
+# sciter layouts
 
-This is a [sciter.js](https://sciter.com/) demo app that explores different layout possibilities in sciter.
+This is a [sciter.js](https://sciter.com/) demo that explores the different layout possibilities in sciter.
 
 ![sciter layout screenshot](screenshot.png)
+
+## requirements
+
+- Node.js `node` (16 LTS) and its package manager `npm`.
+    - On Windows [download](https://nodejs.dev/download/) and run the installer
+    - On Linux check the [installation guide](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04#option-2-%E2%80%94-installing-node-js-with-apt-using-a-nodesource-ppa).
 
 ## demo
 
 - git clone the repository
-- on Linux/Mac `chmod +x install.sh start.sh`
-- run `install.bat` (Win) or `./install.sh` (Linux/Mac) to download the latest sciter binaries and the sciter package manager
-- run `start.bat` (Win) or `./start.sh` (Linux/Mac)
+- install packages `npm install`
+- install latest sciter sdk `npm run install-sdk`
+- run demo `npm run scapp`
 
 # layout
 
