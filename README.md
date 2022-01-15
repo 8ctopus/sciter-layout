@@ -8,7 +8,7 @@ This is a [sciter.js](https://sciter.com/) demo that explores the different layo
 
 - Node.js `node` (16 LTS) and its package manager `npm`.
     - On Windows [download](https://nodejs.dev/download/) and run the installer
-    - On Linux check the [installation guide](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04#option-2-%E2%80%94-installing-node-js-with-apt-using-a-nodesource-ppa).
+    - On Linux check the [installation guide](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04#option-2-%E2%80%94-installing-node-js-with-apt-using-a-nodesource-ppa)
 
 ## demo
 
@@ -17,13 +17,13 @@ This is a [sciter.js](https://sciter.com/) demo that explores the different layo
 - install latest sciter sdk `npm run install-sdk`
 - run demo `npm run scapp`
 
-# layout
+## layout
 
 sciter layout concepts are introduced in this article
 
 [https://terrainformatica.com/w3/flex-layout/flex-vs-flexbox.htm](https://terrainformatica.com/w3/flex-layout/flex-vs-flexbox.htm)
 
-## flow
+### flow
 
 `flow` is the sciter analog to `display:flex`. Possible values are:
 
@@ -35,13 +35,13 @@ sciter layout concepts are introduced in this article
 - `stack` elements are on top of each other
 - `table`, `table-fixed` ? add an example
 
-## flex length units
+### flex length units
 
 Flex length units are "weights" used in distribution of free space along some direction.
 
 [https://sciter.com/css-extensions-in-h-smile-engine-part-ii-flex-units/](https://sciter.com/css-extensions-in-h-smile-engine-part-ii-flex-units/)
 
-### %%
+#### %%
 
 ```css
 width: 50%;
@@ -49,7 +49,7 @@ margin-left: 30%%;
 margin-right: 70%%;
 ```
 
-### *
+#### *
 
 1* == 100%%
 
