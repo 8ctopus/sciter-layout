@@ -1,8 +1,5 @@
 {
   "name": "sciter-layout",
-  "devDependencies": {
-    "sciter-sandbox": "github:8ctopus/sciter-sandbox#1.1.5"
-  },
   "scripts": {
     "install-sdk": "node ./node_modules/sciter-sandbox/scripts/install.mjs",
     "scapp": "node ./node_modules/sciter-sandbox/scripts/start.mjs scapp",
@@ -20,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/8ctopus/sciter-layout/issues"
   },
-  "homepage": "https://github.com/8ctopus/sciter-layout#readme"
+  "homepage": "https://github.com/8ctopus/sciter-layout#readme",
+  "devDependencies": {
+    "sciter-sandbox": "^1.1.5"
+  }
 }
