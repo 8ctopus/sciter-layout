@@ -39,7 +39,7 @@ header > button {
 import * as sys from "@sys";
 import {decode} from "@sciter";
 
-document.ready = function() {
+document.on("ready", function() {
     // list directory contents
     const list = sys.fs.$readdir("layouts");
 
@@ -66,7 +66,7 @@ document.ready = function() {
         // add button to ui
         parent.append(button);
     }
-};
+});
 
 /// header button click
 document.on("click", "header > button", function(event, button) {
