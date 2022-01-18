@@ -1,4 +1,4 @@
-# sciter layouts
+# sciter layout
 
 This is a [sciter.js](https://sciter.com/) demo that explores the different layout possibilities in sciter.
 
