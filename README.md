@@ -1,6 +1,6 @@
 # sciter layout
 
-This is a [sciter.js](https://sciter.com/) demo that explores the different layout possibilities in sciter.
+This is a [sciter.js](https://sciter.com/) demo that explores the different block layout possibilities.
 
 ![sciter layout screenshot](screenshot.png)
 
@@ -19,13 +19,13 @@ This is a [sciter.js](https://sciter.com/) demo that explores the different layo
 
 ## layout
 
-sciter layout concepts are introduced in this article:
+Layout concepts are introduced in this article:
 
 [https://terrainformatica.com/w3/flex-layout/flex-vs-flexbox.htm](https://terrainformatica.com/w3/flex-layout/flex-vs-flexbox.htm)
 
 ### flow
 
-`flow` is the sciter analog to `display:flex`. Possible values are:
+`flow` is the sciter analog to `display: flex`. Possible values are:
 
 - `horizontal` contained elements are on a horizontal line
 - `vertical` contained elements are on a vertical line
