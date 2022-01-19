@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/8ctopus/sciter-layout#readme",
   "devDependencies": {
-    "sciter-sandbox": "^1.1.5"
+    "sciter-logger": "^1.1.3",
+    "sciter-sandbox": "^1.1.5",
+    "sciter-utils": "^0.7.1"
   }
 }

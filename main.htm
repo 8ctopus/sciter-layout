@@ -1,12 +1,16 @@
 <html
     window-resizable="true"
+    window-width="1200dip"
+    window-height="800dip"
 >
 <head>
 <title>sciter layout demo</title>
 <style>
 
+@import url(./node_modules/sciter-logger/src/logger.css);
+
 html {
-    size: max-content;
+//    size: max-content;
 }
 
 body {
@@ -31,15 +35,51 @@ header > button {
     margin: 0 *;
 }
 
+footer {
+    height: 20%;
+}
+
 </style>
-<script src="js/utils.js" />
 <script type="module">
 
 // import functions from sciter libraries
 import * as sys from "@sys";
 import {decode} from "@sciter";
 
+import Logger from "./node_modules/sciter-logger/src/logger.js";
+import * as Utils from "./node_modules/sciter-utils/src/utils.js";
+
+// capture unhandled exceptions
+Logger.capture();
+
+// initialize logger
+Logger.init();
+
+// attach logger to console
+Logger.attach();
+
 document.on("ready", function() {
+    // redirect logger output to plaintext
+    Logger.plaintext(document.$("plaintext#logger"));
+
+    // add support for F5 reload
+    Utils.addReloadWindow();
+
+    // close window on escape key press
+    Utils.closeWindowOnEscape(Window.this);
+
+    // center window on screen
+    Utils.centerWindow(Window.this, "screen");
+
+    // bring window to front and set input focus
+    if (!Window.this.activate(true))
+        console.error("Activate window - FAILED");
+
+    console.log("Sandbox started, Enjoy!");
+
+    // log sciter version
+    console.debug(Utils.sciterInfo());
+
     // list directory contents
     const list = sys.fs.$readdir("layouts");
 
@@ -94,4 +134,7 @@ document.on("click", "header > button", function(event, button) {
 <body>
     Click the buttons to explore the various layout possibilites with sciter.
 </body>
+<footer>
+    <plaintext #logger readonly />
+</footer>
 </html>
