@@ -19,9 +19,9 @@ This is a [sciter.js](https://sciter.com/) demo that explores the different bloc
 
 ## layout
 
-Layout concepts are introduced in this article:
-
-[https://terrainformatica.com/w3/flex-layout/flex-vs-flexbox.htm](https://terrainformatica.com/w3/flex-layout/flex-vs-flexbox.htm)
+Layout concepts are introduced in these articles:
+- [https://terrainformatica.com/w3/flex-layout/flex-vs-flexbox.htm](https://terrainformatica.com/w3/flex-layout/flex-vs-flexbox.htm)
+- [https://sciter.com/docs/flex-flow/flex-layout.htm](https://sciter.com/docs/flex-flow/flex-layout.htm)
 
 ### flow
 
