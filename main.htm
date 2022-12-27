@@ -117,7 +117,7 @@ document.on("click", "header > button", function(event, button) {
     const buffer = sys.fs.$readfile(file);
 
     // decode buffer
-    const html = decode(buffer, "utf-8");
+    const html = decode(buffer, "utf8");
 
     // get element to insert code in
     const include = document.$("body");
