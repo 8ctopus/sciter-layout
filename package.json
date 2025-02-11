@@ -1,5 +1,6 @@
 {
   "name": "sciter-layout",
+  "version": "1.0.0",
   "scripts": {
     "install-sdk": "node ./node_modules/sciter-sandbox/scripts/install.mjs",
     "scapp": "node ./node_modules/sciter-sandbox/scripts/start.mjs scapp",
@@ -22,6 +23,5 @@
     "sciter-logger": "^1.1.3",
     "sciter-sandbox": "^1.1.5",
     "sciter-utils": "^1.0.0"
-  },
-  "version": "1.0.0"
+  }
 }
