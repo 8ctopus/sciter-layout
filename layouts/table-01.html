@@ -1,0 +1,71 @@
+<html>
+<head>
+<style type="text/css">
+
+table {
+    flow: table-fixed;
+    min-height: max-content;
+    border-spacing: 0;
+}
+
+th, td {
+    padding: 2dip 3dip;
+}
+
+th {
+    min-width: 20dip;
+    width: max-content;
+    background-color: threedlightshadow;
+}
+
+@const BORDER_GRID: solid 1dip darkgray;
+@const BORDER_NONE: solid 1dip transparent;
+
+thead {
+    border: @BORDER_GRID;
+}
+
+tbody:not(:empty) {
+    border: @BORDER_GRID;
+    border-top: none;
+}
+
+th:not(:last-child),
+tbody td:not(:last-child){
+    border-right: @BORDER_GRID;
+}
+
+tbody tr:nth-child(odd) td {
+    border-bottom: @BORDER_NONE;
+    border-top: @BORDER_NONE;
+    padding-top: 1dip;
+    padding-bottom: 1dip;
+}
+
+tbody tr:nth-child(even) td {
+    border-bottom: @BORDER_GRID;
+    border-top: @BORDER_GRID;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+</style>
+</head>
+<body>
+<table>
+    <thead>
+        <tr> <th>#</th><th>X (mil)</th><th>Y (mil)</th><th>Arc Angle (Neg = CW)</th> </tr>
+    </thead>
+    <tbody>
+        <tr> <td>1</td><td>3953.887</td><td>4086.598</td><td></td> </tr>
+        <tr> <td>2</td><td>4763.688</td><td>3276.802</td><td>20.292</td> </tr>
+        <tr> <td>3</td><td>4595</td><td>2995</td><td>20.292</td> </tr>
+        <tr> <td>4</td><td>4766.905</td><td>2633.188</td><td>38.002</td> </tr>
+        <tr> <td>5</td><td>4118.456</td><td>2633.187</td><td>-45.418</td> </tr>
+        <tr> <td>6</td><td>3751.324</td><td>2349.345</td><td>-92.720</td> </tr>
+    </tbody>
+    </table>
+</body>
+</html>
