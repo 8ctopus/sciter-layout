@@ -11,15 +11,16 @@ This is a [sciter.js](https://sciter.com/) demo that explores the different bloc
 - install latest sciter sdk `npm run install-sdk`
 - start the demo `npm run scapp`
 
-## demo requirements
+### demo requirements
 
-- A recent version of Node.js `node` (tested with 16 LTS) and its package manager `npm`.
+- A recent version of Node.js `node` (tested with 22 LTS) and its package manager `npm`.
     - On Windows [download](https://nodejs.dev/download/) and run the installer
     - On Linux check the [installation guide](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04#option-2-%E2%80%94-installing-node-js-with-apt-using-a-nodesource-ppa)
 
 ## layout
 
 Layout concepts are introduced in these articles:
+
 - [https://terrainformatica.com/w3/flex-layout/flex-vs-flexbox.htm](https://terrainformatica.com/w3/flex-layout/flex-vs-flexbox.htm)
 - [https://sciter.com/docs/flex-flow/flex-layout.htm](https://sciter.com/docs/flex-flow/flex-layout.htm)
 
