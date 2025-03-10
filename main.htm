@@ -111,7 +111,7 @@ document.on("ready", function() {
 /// header button click
 document.on("click", "header > button", function(event, button) {
     // get file name from button
-    const file = "layouts/" + button.innerHTML + ".html";
+    const file = `layouts/${button.innerHTML}.html`;
 
     // read file
     const buffer = sys.fs.$readfile(file);
