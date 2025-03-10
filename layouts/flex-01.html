@@ -3,13 +3,13 @@ See https://sciter.com/css-extensions-in-h-smile-engine-part-ii-flex-units/
 -->
 <style>
 
-.parent {
+div.parent {
     // take maximum width and height
     size: *;
     flow: horizontal;
 }
 
-.parent > div {
+div.parent > div {
     height: *;
 
     margin: 5dip;
@@ -22,15 +22,15 @@ See https://sciter.com/css-extensions-in-h-smile-engine-part-ii-flex-units/
     vertical-align: middle;
 }
 
-.parent > div:first-child {
+div.parent > div:first-child {
     width: 1*;
 }
 
-.parent > div:nth-child(2) {
+div.parent > div:nth-child(2) {
     width: 3*;
 }
 
-.parent > div:last-child {
+div.parent > div:last-child {
     width: 2*;
 }
 
